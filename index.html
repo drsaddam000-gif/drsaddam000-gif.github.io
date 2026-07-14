@@ -3,95 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Data Analyst Portfolio</title>
-    <!-- Tailwind CSS for modern, clean styling -->
+    <title>Saddam Hussain — Data Analyst & Analytics Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
         body {
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #0b0f17;
+        }
+        .blinking-cursor::after {
+            content: '▋';
+            animation: blink 1s step-start infinite;
+            color: #10b981;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
         }
     </style>
 </head>
-<body class="bg-[#0B0F19] text-[#E2E8F0] min-h-screen p-6 md:p-12">
+<body class="text-[#e2e8f0] selection:bg-emerald-500/30 selection:text-emerald-300 antialiased min-h-screen">
 
-    <!-- Terminal Container -->
-    <div class="max-w-3xl mx-auto bg-[#111827] border border-gray-800 rounded-lg shadow-2xl overflow-hidden">
-        
-        <!-- Terminal Window Header -->
-        <div class="bg-[#1F2937] px-4 py-3 flex items-center justify-between border-b border-gray-850">
-            <div class="flex space-x-2">
-                <span class="w-3 h-3 bg-red-500 rounded-full inline-block"></span>
-                <span class="w-3 h-3 bg-yellow-500 rounded-full inline-block"></span>
-                <span class="w-3 h-3 bg-green-500 rounded-full inline-block"></span>
+    <!-- Navigation Header -->
+    <header class="max-w-4xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between border-b border-gray-800/60 sticky top-0 bg-[#0b0f17]/90 backdrop-blur-md z-50">
+        <div class="text-gray-400 text-sm font-medium">~/saddam_</div>
+        <nav class="flex space-x-6 text-sm font-medium text-gray-400">
+            <a href="#about" class="hover:text-emerald-400 transition-colors">#About</a>
+            <a href="#projects" class="hover:text-emerald-400 transition-colors">#Projects</a>
+            <a href="#skills" class="hover:text-emerald-400 transition-colors">#Skills</a>
+            <a href="#contact" class="hover:text-emerald-400 transition-colors">#Contact</a>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pt-16 pb-24 space-y-24">
+
+        <!-- HERO SECTION -->
+        <section id="about" class="space-y-6">
+            <div class="text-xs tracking-widest text-gray-500 font-bold uppercase">// Data · Pipelines · Modeling · BI</div>
+            <div class="space-y-2">
+                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Saddam Hussain</h1>
+                <h2 class="text-xl md:text-2xl text-emerald-400 font-medium tracking-tight blinking-cursor">> Data Analyst & Analytics Engineer</h2>
             </div>
-            <span class="text-xs text-gray-400">bash — analytics_console</span>
-            <div></div>
-        </div>
-
-        <!-- Terminal Body -->
-        <div class="p-6 md:p-8 space-y-8">
             
-            <!-- SECTION 1: HERO -->
-            <div>
-                <p class="text-emerald-400 font-bold">$ SELECT * FROM data_analysts WHERE name = 'Saddam Hussain';</p>
-                <div class="mt-4 pl-4 border-l-2 border-emerald-500/50 space-y-2">
-                    <p class="text-lg text-gray-200 font-semibold">> 1 row returned:</p>
-                    <p class="text-gray-300 leading-relaxed">
-                        Data Analyst & Analytics Engineer building predictive models, optimizing data pipelines, and turning messy datasets into automated business intelligence dashboards.
-                    </p>
-                    <p class="text-sm text-gray-400 pt-2">
-                        <strong class="text-gray-300">Location:</strong> Springfield, VA <br>
-                        <strong class="text-gray-300">Focus:</strong> ETL Pipelines · Data Modeling · Predictive Analytics · Dashboard Automation
-                    </p>
+            <p class="text-gray-400 text-base md:text-lg max-w-2xl leading-relaxed">
+                Data analyst building robust data models, automated ETL workflows, and interactive analytics architecture that turns unstructured database records into bottom-line revenue.
+            </p>
+            
+            <div class="text-sm text-gray-500 space-y-1">
+                <div>📍 Springfield, VA · U.S. Citizen</div>
+                <div class="pt-4 flex flex-wrap gap-3 text-emerald-400 font-medium">
+                    <a href="#projects" class="hover:underline flex items-center">View projects <span class="ml-1 text-xs">↘</span></a>
+                    <span class="text-gray-700">·</span>
+                    <a href="mailto:dami117777@gmail.com" class="hover:underline flex items-center">Email me <span class="ml-1 text-xs">↗</span></a>
                 </div>
             </div>
 
-            <!-- SECTION 2: SKILLS -->
-            <div>
-                <p class="text-emerald-400 font-bold">$ cat skills.json</p>
-                <div class="mt-4 pl-4 border-l-2 border-emerald-500/50 bg-[#0F172A] p-4 rounded text-sm md:text-base">
-                    <p><span class="text-purple-400">const</span> <span class="text-blue-400">Languages</span>     = [<span class="text-amber-300">"Python", "SQL", "R", "SAS"</span>]</p>
-                    <p><span class="text-purple-400">const</span> <span class="text-blue-400">DataPlatforms</span> = [<span class="text-amber-300">"PostgreSQL", "Snowflake", "BigQuery", "AWS S3"</span>]</p>
-                    <p><span class="text-purple-400">const</span> <span class="text-blue-400">BiTools</span>       = [<span class="text-amber-300">"Tableau", "Power BI", "Looker Studio"</span>]</p>
-                    <p><span class="text-purple-400">const</span> <span class="text-blue-400">Libraries</span>     = [<span class="text-amber-300">"Pandas", "NumPy", "Scikit-Learn", "Matplotlib"</span>]</p>
+            <!-- Terminal Focus Prompt -->
+            <div class="pt-6">
+                <div class="text-gray-500 text-xs mb-2">saddam@portfolio: ~ $ cat focus.txt</div>
+                <div class="text-sm font-medium text-gray-300 bg-gray-900/40 border border-gray-800/80 p-3 rounded-md inline-block">
+                    etl_pipelines · data_modeling · statistical_analysis · automated_bi
                 </div>
             </div>
+        </section>
 
-            <!-- SECTION 3: PROJECT -->
-            <div>
-                <p class="text-emerald-400 font-bold">$ ls ./projects/churn_model</p>
-                <div class="mt-4 pl-4 border-l-2 border-emerald-500/50 space-y-3">
-                    <h3 class="text-lg font-bold text-white">E-Commerce Churn Prediction Engine (2026)</h3>
-                    <p class="text-sm text-gray-400">
-                        An end-to-end analytics project that extracts customer behavior data, builds a predictive churn model, and automates a stakeholder dashboard.
-                    </p>
-                    <ul class="list-disc list-inside space-y-1 text-sm text-gray-300 pl-2">
-                        <li>Built automated ETL pipelines in SQL/Python to aggregate 1.2M rows of daily user activity.</li>
-                        <li>Developed a Scikit-Learn Random Forest model predicting churn with 88% accuracy.</li>
-                        <li>Engineered a live Power BI dashboard for marketing teams, reducing customer attrition by 14%.</li>
-                    </ul>
-                    <p class="text-xs text-emerald-400 font-semibold pt-1">
-                        Tech Stack: Python · PostgreSQL · Scikit-Learn · Power BI · AWS
-                    </p>
-                </div>
-            </div>
-
-            <!-- SECTION 4: CONTACT -->
-            <div class="pt-4 border-t border-gray-800">
-                <p class="text-emerald-400 font-bold">$ ./contact_me.sh</p>
-                <p class="text-sm text-gray-300 mt-2 pl-4">
-                    Ready to collaborate or talk data? Shoot me an email at 
-                    <a href="mailto:drsaddam000@gmail.com" class="text-blue-400 hover:underline">drsaddam000@gmail.com</a>.
+        <!-- 01 -- WHOAMI -->
+        <section class="space-y-6 border-t border-gray-900 pt-12">
+            <div class="text-emerald-400 font-bold text-sm tracking-wider">01 — whoami</div>
+            <h2 class="text-2xl font-bold text-white tracking-tight">About me</h2>
+            <div class="text-gray-400 leading-relaxed max-w-2xl space-y-4">
+                <p>
+                    I operate directly at the critical intersection of business intelligence strategy and hands-on data infrastructure engineering. I focus heavily on writing clean, production-ready SQL scripts, structuring highly optimized data warehouses, and deploying continuous analytics guardrails.
                 </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-sm">
+                    <div class="border border-gray-850 bg-gray-900/20 p-4 rounded-md">
+                        <div class="text-white font-semibold mb-1">Analytics Architecture</div>
+                        <p class="text-xs text-gray-500">Writing optimized database schemas, indices, and view models.</p>
+                    </div>
+                    <div class="border border-gray-850 bg-gray-900/20 p-4 rounded-md">
+                        <div class="text-white font-semibold mb-1">Automated ETL</div>
+                        <p class="text-xs text-gray-500">Building scalable Python pipelines, scheduling tasks, and structured imports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 -- PROJECTS -->
+        <section id="projects" class="space-y-6 border-t border-gray-900 pt-12">
+            <div class="text-emerald-400 font-bold text-sm tracking-wider">02 — ls ./projects</div>
+            <div class="space-y-1">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Selected projects</h2>
+                <p class="text-sm text-gray-500">Production dashboards, data modeling pipelines, and architecture I've designed.</p>
             </div>
 
-        </div>
-    </div>
+            <!-- Project Card -->
+            <div class="border border-gray-800/60 bg-gray-900/10 p-6 rounded-lg space-y-4 hover:border-emerald-500/30 transition-all group">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-gray-500">2026</span>
+                        <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">E-Commerce Churn Prediction Engine</h3>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    An enterprise analytics pipeline extracting user event streams via scheduled workflows, processing telemetry datasets, and hosting predictive churn insights inside direct cloud architecture.
+                </p>
+                <ul class="space-y-2 text-xs md:text-sm text-gray-300 pl-1">
+                    <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Constructed automated ETL pipelines to clean, ingest, and schema-map 1.2M+ rows of activity data daily.</li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Engineered a predictive Scikit-Learn machine learning classifier delivering 88% precision vectors.</li>
+                    <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Formatted a real-time analytics suite in Power BI, slicing active customer drop-offs by exactly 14%.</li>
+                </ul>
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">Python</span>
+                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">PostgreSQL</span>
+                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">Scikit-Learn</span>
+                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">Power BI</span>
+                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">AWS S3</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 -- SKILLS -->
+        <section id="skills" class="space-y-6 border-t border-gray-900 pt-12">
+            <div class="text-emerald-400 font-bold text-sm tracking-wider">03 — cat skills.json</div>
+            <h2 class="text-2xl font-bold text-white tracking-tight">Technical skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <div class="space-y-2">
+                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> Languages =</div>
+                    <div class="text-gray-300 font-medium">Python · SQL (Postgres, T-SQL) · R · SAS</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> CloudPlatforms =</div>
+                    <div class="text-gray-300 font-medium">Snowflake · Google BigQuery · AWS S3 · Databricks</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> AnalyticsTools =</div>
+                    <div class="text-gray-300 font-medium">Tableau Desktop · Power BI Engine · Looker Studio</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> Frameworks =</div>
+                    <div class="text-gray-300 font-medium">Pandas · NumPy · Scikit-Learn · Matplotlib · Git</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 -- CONTACT -->
+        <section id="contact" class="space-y-6 border-t border-gray-900 pt-12">
+            <div class="text-emerald-400 font-bold text-sm tracking-wider">04 — ./contact.sh</div>
+            <h2 class="text-2xl font-bold text-white tracking-tight">Get in touch.</h2>
+            <p class="text-gray-400 text-sm max-w-xl leading-relaxed">
+                For analytics consultation, full-time opportunities, or data pipeline system strategy—direct email communications are monitored hourly.
+            </p>
+            <div class="text-sm font-medium pt-2">
+                <a href="mailto:dami117777@gmail.com" class="text-emerald-400 hover:underline">dami117777@gmail.com</a>
+            </div>
+        </section>
+
+    </main>
 
     <!-- Footer -->
-    <div class="text-center text-xs text-gray-600 mt-8">
-        Designed & Built inspired by terminal environments • 2026
-    </div>
+    <footer class="text-center text-[10px] text-gray-600 border-t border-gray-950 py-8 bg-[#070a10]">
+        $ echo "Designed & built by Saddam Hussain · 2026"
+    </footer>
 
 </body>
 </html>
