@@ -5,163 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saddam Hussain — Data Analyst & Analytics Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap');
-        body {
-            font-family: 'JetBrains Mono', monospace;
-            background-color: #0b0f17;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBg: '#0a0a0a',
+                        brandPanel: '#121212',
+                        brandBorder: '#262626'
+                    }
+                }
+            }
         }
-        .blinking-cursor::after {
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600&display=swap');
+        body {
+            font-family: 'Geist Mono', monospace;
+            background-color: #0a0a0a;
+        }
+        .cursor-blink::after {
             content: '▋';
-            animation: blink 1s step-start infinite;
+            animation: blink 1.2s infinite;
             color: #10b981;
+            margin-left: 2px;
         }
         @keyframes blink {
+            0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
     </style>
 </head>
-<body class="text-[#e2e8f0] selection:bg-emerald-500/30 selection:text-emerald-300 antialiased min-h-screen">
+<body class="text-neutral-300 selection:bg-emerald-500/20 selection:text-emerald-400 antialiased min-h-screen">
 
-    <!-- Navigation Header -->
-    <header class="max-w-4xl mx-auto px-6 py-6 flex flex-wrap items-center justify-between border-b border-gray-800/60 sticky top-0 bg-[#0b0f17]/90 backdrop-blur-md z-50">
-        <div class="text-gray-400 text-sm font-medium">~/saddam_</div>
-        <nav class="flex space-x-6 text-sm font-medium text-gray-400">
-            <a href="#about" class="hover:text-emerald-400 transition-colors">#About</a>
-            <a href="#projects" class="hover:text-emerald-400 transition-colors">#Projects</a>
-            <a href="#skills" class="hover:text-emerald-400 transition-colors">#Skills</a>
-            <a href="#contact" class="hover:text-emerald-400 transition-colors">#Contact</a>
+    <!-- Top Navigation Bar -->
+    <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between border-b border-neutral-900 sticky top-0 bg-brandBg/80 backdrop-blur-md z-50">
+        <div class="text-neutral-400 text-sm font-medium tracking-tight">~/saddam_</div>
+        <nav class="flex space-x-6 text-sm font-medium text-neutral-500">
+            <a href="#about" class="hover:text-neutral-200 transition-colors">#About</a>
+            <a href="#experience" class="hover:text-neutral-200 transition-colors">#Experience</a>
+            <a href="#projects" class="hover:text-neutral-200 transition-colors">#Projects</a>
+            <a href="#skills" class="hover:text-neutral-200 transition-colors">#Skills</a>
+            <a href="#contact" class="hover:text-neutral-200 transition-colors">#Contact</a>
         </nav>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 pt-16 pb-24 space-y-24">
+    <main class="max-w-5xl mx-auto px-6 pt-16 pb-24 space-y-28">
 
-        <!-- HERO SECTION -->
-        <section id="about" class="space-y-6">
-            <div class="text-xs tracking-widest text-gray-500 font-bold uppercase">// Data · Pipelines · Modeling · BI</div>
+        <!-- HERO INTRO SECTION -->
+        <section id="about" class="space-y-6 max-w-3xl">
+            <div class="text-xs font-mono text-neutral-600">// Software · Data Systems · Business Intelligence · Modeling</div>
             <div class="space-y-2">
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-white">Saddam Hussain</h1>
-                <h2 class="text-xl md:text-2xl text-emerald-400 font-medium tracking-tight blinking-cursor">> Data Analyst & Analytics Engineer</h2>
+                <h1 class="text-4xl font-semibold tracking-tight text-neutral-100">Saddam Hussain</h1>
+                <h2 class="text-lg text-emerald-500 font-medium tracking-tight cursor-blink">&gt; Data Analyst & Analytics Engineer</h2>
             </div>
-            
-            <p class="text-gray-400 text-base md:text-lg max-w-2xl leading-relaxed">
-                Data analyst building robust data models, automated ETL workflows, and interactive analytics architecture that turns unstructured database records into bottom-line revenue.
+            <p class="text-neutral-400 text-base leading-relaxed tracking-normal">
+                Data analyst building robust relational data architectures, automated ETL streaming pipelines, and production analytics infrastructure that converts unstructured database events into interactive visual intelligence.
             </p>
-            
-            <div class="text-sm text-gray-500 space-y-1">
+            <div class="text-xs text-neutral-500 flex flex-wrap gap-x-4 gap-y-2 pt-2">
                 <div>📍 Springfield, VA · U.S. Citizen</div>
-                <div class="pt-4 flex flex-wrap gap-3 text-emerald-400 font-medium">
-                    <a href="#projects" class="hover:underline flex items-center">View projects <span class="ml-1 text-xs">↘</span></a>
-                    <span class="text-gray-700">·</span>
-                    <a href="mailto:dami117777@gmail.com" class="hover:underline flex items-center">Email me <span class="ml-1 text-xs">↗</span></a>
+                <div class="flex gap-3 text-emerald-500 font-medium">
+                    <a href="#projects" class="hover:underline">View projects ↘</a>
+                    <span class="text-neutral-800">·</span>
+                    <a href="mailto:dami117777@gmail.com" class="hover:underline">Résumé ↗</a>
                 </div>
             </div>
 
-            <!-- Terminal Focus Prompt -->
-            <div class="pt-6">
-                <div class="text-gray-500 text-xs mb-2">saddam@portfolio: ~ $ cat focus.txt</div>
-                <div class="text-sm font-medium text-gray-300 bg-gray-900/40 border border-gray-800/80 p-3 rounded-md inline-block">
-                    etl_pipelines · data_modeling · statistical_analysis · automated_bi
-                </div>
+            <!-- Terminal Commands Input View -->
+            <div class="pt-6 font-mono text-sm space-y-2">
+                <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">cat focus.txt</span></div>
+                <div class="text-neutral-400 pl-4 border-l border-neutral-800">cloud_warehouse · dimensional_modeling · dbt · pipeline_automation</div>
+                <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">ls ./stack</span></div>
+                <div class="text-neutral-400 pl-4 border-l border-neutral-800">sql · python · snowflake · tableau · postgresql</div>
             </div>
         </section>
 
-        <!-- 01 -- WHOAMI -->
-        <section class="space-y-6 border-t border-gray-900 pt-12">
-            <div class="text-emerald-400 font-bold text-sm tracking-wider">01 — whoami</div>
-            <h2 class="text-2xl font-bold text-white tracking-tight">About me</h2>
-            <div class="text-gray-400 leading-relaxed max-w-2xl space-y-4">
-                <p>
-                    I operate directly at the critical intersection of business intelligence strategy and hands-on data infrastructure engineering. I focus heavily on writing clean, production-ready SQL scripts, structuring highly optimized data warehouses, and deploying continuous analytics guardrails.
+        <!-- 01 — WHOAMI (Two-column layout like Hashaam's) -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">01 — whoami</div>
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-semibold text-neutral-200">About me</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Information Systems professional working directly at the intersection of structural database configuration and diagnostic data operations. I specialize in isolating key corporate metrics, generating high-performance dashboard tools, and designing logical schemas that ensure historical records remain clean, indexable, and production-ready.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 text-sm">
-                    <div class="border border-gray-850 bg-gray-900/20 p-4 rounded-md">
-                        <div class="text-white font-semibold mb-1">Analytics Architecture</div>
-                        <p class="text-xs text-gray-500">Writing optimized database schemas, indices, and view models.</p>
+                
+                <!-- Specialized Sub-bullet grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-xs font-mono">
+                    <div class="space-y-1">
+                        <div class="text-neutral-200 font-medium">Data Modeling</div>
+                        <div class="text-neutral-500">Star schemas, normalization metrics, primary keys, and performance tuning views.</div>
                     </div>
-                    <div class="border border-gray-850 bg-gray-900/20 p-4 rounded-md">
-                        <div class="text-white font-semibold mb-1">Automated ETL</div>
-                        <p class="text-xs text-gray-500">Building scalable Python pipelines, scheduling tasks, and structured imports.</p>
+                    <div class="space-y-1">
+                        <div class="text-neutral-200 font-medium">ETL Frameworks</div>
+                        <div class="text-neutral-500">Automated multi-stage data collection streams built using robust Python APIs.</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 02 -- PROJECTS -->
-        <section id="projects" class="space-y-6 border-t border-gray-900 pt-12">
-            <div class="text-emerald-400 font-bold text-sm tracking-wider">02 — ls ./projects</div>
-            <div class="space-y-1">
-                <h2 class="text-2xl font-bold text-white tracking-tight">Selected projects</h2>
-                <p class="text-sm text-gray-500">Production dashboards, data modeling pipelines, and architecture I've designed.</p>
+        <!-- 02 — GIT LOG --EXPERIENCE -->
+        <section id="experience" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">02 — git log --experience</div>
+            <div class="md:col-span-2 space-y-8">
+                <h3 class="text-lg font-semibold text-neutral-200">Experience</h3>
+                
+                <!-- Experience block -->
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-start justify-between text-sm">
+                        <div>
+                            <span class="font-semibold text-neutral-200">Data Analytics Intern</span>
+                            <span class="text-neutral-500">@ Tech Infrastructure Corp</span>
+                        </div>
+                        <span class="text-xs text-neutral-500 font-mono">May 2026 – Aug 2026</span>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Managed large-scale PostgreSQL structures processing live metrics across multiple testing environments. Built scalable custom scripts to optimize query compute costs by 20% and maintained structural integrity for weekly executive analytical operations.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 pt-1">
+                        <span class="text-[11px] font-mono bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">PostgreSQL</span>
+                        <span class="text-[11px] font-mono bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Python</span>
+                        <span class="text-[11px] font-mono bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Tableau</span>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Project Card -->
-            <div class="border border-gray-800/60 bg-gray-900/10 p-6 rounded-lg space-y-4 hover:border-emerald-500/30 transition-all group">
-                <div class="flex items-start justify-between">
+        <!-- 03 — LS ./PROJECTS -->
+        <section id="projects" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">03 — ls ./projects</div>
+            <div class="md:col-span-2 space-y-6">
+                <div class="space-y-1">
+                    <h3 class="text-lg font-semibold text-neutral-200">Selected projects</h3>
+                    <p class="text-xs text-neutral-500 font-mono">Data pipelines and automated intelligence frameworks I've engineered.</p>
+                </div>
+
+                <!-- Premium Project Record Entry -->
+                <div class="space-y-3 pt-2">
+                    <div class="font-mono text-xs text-neutral-500">2026</div>
+                    <h4 class="text-base font-semibold text-neutral-100 hover:text-emerald-400 transition-colors">E-Commerce Churn Prediction Pipeline</h4>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        An end-to-end analytical framework parsing user behavior attributes across database records to predict structural user retention drops.
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-neutral-400 font-mono pl-1">
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Parsed 1.2M+ rows of activity tracking matrices through automated raw Python ingestion blocks.</li>
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Formulated a Random Forest analytical script producing clean predictive vectors at 88% precision.</li>
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Automated a live visual engine inside Power BI reducing manual diagnostic report compilation by 40%.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Python</span>
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">PostgreSQL</span>
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Scikit-Learn</span>
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Power BI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 — CAT SKILLS.JSON -->
+        <section id="skills" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">04 — cat skills.json</div>
+            <div class="md:col-span-2 space-y-6">
+                <h3 class="text-lg font-semibold text-neutral-200">Technical skills</h3>
+                
+                <div class="space-y-4 text-xs font-mono">
                     <div>
-                        <span class="text-xs font-mono text-gray-500">2026</span>
-                        <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">E-Commerce Churn Prediction Engine</h3>
+                        <div class="text-neutral-500 mb-1"><span class="text-purple-400">const</span> Languages =</div>
+                        <div class="text-neutral-300 font-medium">Python · SQL (Postgres, BigQuery, T-SQL) · R · SAS</div>
+                    </div>
+                    <div>
+                        <div class="text-neutral-500 mb-1"><span class="text-purple-400">const</span> DataInfrastructure =</div>
+                        <div class="text-neutral-300 font-medium">Snowflake · Google BigQuery · AWS S3 · Databricks · dbt</div>
+                    </div>
+                    <div>
+                        <div class="text-neutral-500 mb-1"><span class="text-purple-400">const</span> BiPlatforms =</div>
+                        <div class="text-neutral-300 font-medium">Tableau Desktop · Power BI Engine · Looker Studio</div>
                     </div>
                 </div>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    An enterprise analytics pipeline extracting user event streams via scheduled workflows, processing telemetry datasets, and hosting predictive churn insights inside direct cloud architecture.
+            </div>
+        </section>
+
+        <!-- 05 — ./CONTACT.SH -->
+        <section id="contact" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">05 — ./contact.sh</div>
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-semibold text-neutral-200">Get in touch</h3>
+                <p class="text-neutral-400 text-xs leading-relaxed max-w-md">
+                    For enterprise analytics architecture setups, structural database optimization strategy, or raw analytics consulting—email is monitored continuously.
                 </p>
-                <ul class="space-y-2 text-xs md:text-sm text-gray-300 pl-1">
-                    <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Constructed automated ETL pipelines to clean, ingest, and schema-map 1.2M+ rows of activity data daily.</li>
-                    <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Engineered a predictive Scikit-Learn machine learning classifier delivering 88% precision vectors.</li>
-                    <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Formatted a real-time analytics suite in Power BI, slicing active customer drop-offs by exactly 14%.</li>
-                </ul>
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">Python</span>
-                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">PostgreSQL</span>
-                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">Scikit-Learn</span>
-                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">Power BI</span>
-                    <span class="bg-gray-900 border border-gray-800 text-gray-400 px-2.5 py-0.5 rounded text-xs">AWS S3</span>
+                <div class="text-sm font-mono pt-2">
+                    <a href="mailto:dami117777@gmail.com" class="text-emerald-500 hover:underline">dami117777@gmail.com</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- 03 -- SKILLS -->
-        <section id="skills" class="space-y-6 border-t border-gray-900 pt-12">
-            <div class="text-emerald-400 font-bold text-sm tracking-wider">03 — cat skills.json</div>
-            <h2 class="text-2xl font-bold text-white tracking-tight">Technical skills</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-                <div class="space-y-2">
-                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> Languages =</div>
-                    <div class="text-gray-300 font-medium">Python · SQL (Postgres, T-SQL) · R · SAS</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> CloudPlatforms =</div>
-                    <div class="text-gray-300 font-medium">Snowflake · Google BigQuery · AWS S3 · Databricks</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> AnalyticsTools =</div>
-                    <div class="text-gray-300 font-medium">Tableau Desktop · Power BI Engine · Looker Studio</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-gray-500 text-xs"><span class="text-purple-400">const</span> Frameworks =</div>
-                    <div class="text-gray-300 font-medium">Pandas · NumPy · Scikit-Learn · Matplotlib · Git</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 04 -- CONTACT -->
-        <section id="contact" class="space-y-6 border-t border-gray-900 pt-12">
-            <div class="text-emerald-400 font-bold text-sm tracking-wider">04 — ./contact.sh</div>
-            <h2 class="text-2xl font-bold text-white tracking-tight">Get in touch.</h2>
-            <p class="text-gray-400 text-sm max-w-xl leading-relaxed">
-                For analytics consultation, full-time opportunities, or data pipeline system strategy—direct email communications are monitored hourly.
-            </p>
-            <div class="text-sm font-medium pt-2">
-                <a href="mailto:dami117777@gmail.com" class="text-emerald-400 hover:underline">dami117777@gmail.com</a>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center text-[10px] text-gray-600 border-t border-gray-950 py-8 bg-[#070a10]">
+    <!-- Footer Element match -->
+    <footer class="text-center font-mono text-[10px] text-neutral-600 border-t border-neutral-950 py-12 bg-[#050505]">
         $ echo "Designed & built by Saddam Hussain · 2026"
     </footer>
 
