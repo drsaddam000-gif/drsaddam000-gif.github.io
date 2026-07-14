@@ -40,11 +40,11 @@
             50% { text-shadow: 2px 2px 0px #38bdf8, -2px -2px 0px #22c55e; }
             75% { text-shadow: -2px -2px 0px #38bdf8, 2px 2px 0px #22c55e; }
             100% { text-shadow: 2px -2px 0px #38bdf8, -2px 2px 0px #22c55e; }
-          }
-          .glitch-glow-name {
+        }
+        .glitch-glow-name {
             animation: glitch 3s infinite linear alternate-reverse;
             text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
-          }
+        }
         
         /* Laser Scanner Sweeping Animation */
         @keyframes scan {
@@ -60,7 +60,7 @@
 </head>
 <body class="text-neutral-300 selection:bg-emerald-500/20 selection:text-emerald-400 antialiased min-h-screen">
 
-    <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between border-b border-neutral-900/40 sticky top-0 bg-[#0a0a0a]/85 backdrop-blur-md z-50">
+    <header class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between border-b border-neutral-900 sticky top-0 bg-[#0a0a0a]/80 backdrop-blur-md z-50">
         <div class="text-neutral-400 text-sm font-medium tracking-tight">~/saddam_</div>
         <nav class="flex items-center space-x-6 text-sm font-medium text-neutral-500">
             <a href="#about" class="hover:text-neutral-200 transition-colors">#About</a>
@@ -115,4 +115,195 @@
 
                         <div class="flex items-center gap-3 pt-2">
                             <a href="mailto:drsaddam17777@gmail.com" class="p-2.5 rounded-xl border border-neutral-800 bg-neutral-900/40 text-neutral-400 hover:text-neutral-200 hover:bg-neutral-900/80 transition-all flex items-center justify-center" title="Email">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="p-2.5 rounded-xl border border-neutral-800 bg-neutral-900/40 text-neutral-400 hover:text-neutral-200 hover:bg-neutral-900/80 transition-all flex items-center justify-center" title="LinkedIn">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5 5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 mx-auto md:mx-0 w-64 h-80 md:w-80 md:h-[26rem] relative bg-[#0a0a0a] rounded-[2rem]">
+                    <div class="absolute -inset-[1px] rounded-[2rem] border-2 border-cyan-500/80 shadow-[0_0_35px_rgba(6,182,212,0.3)] pointer-events-none z-30 bg-transparent"></div>
+                    
+                    <div class="relative rounded-[2rem] overflow-hidden h-full w-full bg-[#0a0a0a]">
+                        <div class="absolute inset-0 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:0.5rem_0.5rem] opacity-15 pointer-events-none z-20"></div>
+                        
+                        <div class="absolute inset-x-0 h-[2px] bg-cyan-400 shadow-[0_0_15px_#22d3ee,0_0_30px_#22d3ee] z-30 pointer-events-none scanline"></div>
+                        
+                        <img src="portrait.jpg" alt="Saddam Hussain Portrait" class="w-full h-full object-cover object-top relative z-10 filter brightness-95 scale-[1.01]">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="pt-6 font-mono text-sm space-y-2">
+            <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">cat focus.txt</span></div>
+            <div class="text-neutral-400 pl-4 border-l border-neutral-800">cloud_warehouse · dimensional_modeling · dbt · pipeline_automation</div>
+            <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">ls ./stack</span></div>
+            <div class="text-neutral-400 pl-4 border-l border-neutral-800">sql · python · snowflake · tableau · postgresql</div>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">01 — whoami</div>
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-semibold text-neutral-200">About me</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">
+                    Information Systems professional working directly at the intersection of structural database configuration and diagnostic data operations. I specialize in isolating key corporate metrics, generating high-performance dashboard tools, and designing logical schemas that ensure historical records remain clean, indexable, and production-ready.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-xs font-mono">
+                    <div class="space-y-1">
+                        <div class="text-neutral-200 font-medium">Data Modeling</div>
+                        <div class="text-neutral-500">Star schemas, normalization metrics, primary keys, and performance tuning views.</div>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-neutral-200 font-medium">ETL Frameworks</div>
+                        <div class="text-neutral-500">Automated multi-stage data collection streams built using robust Python APIs.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">02 — git log --experience</div>
+            <div class="md:col-span-2 space-y-8">
+                <h3 class="text-lg font-semibold text-neutral-200">Experience</h3>
+                <div class="space-y-2">
+                    <div class="flex flex-wrap items-start justify-between text-sm">
+                        <div>
+                            <span class="font-semibold text-neutral-200">Data Analytics Intern</span>
+                            <span class="text-neutral-500">@ Tech Infrastructure Corp</span>
+                        </div>
+                        <span class="text-xs text-neutral-500 font-mono">May 2026 – Aug 2026</span>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        Managed large-scale PostgreSQL structures processing live metrics across multiple testing environments. Built scalable custom scripts to optimize query compute costs by 20% and maintained structural integrity for weekly executive analytical operations.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 pt-1">
+                        <span class="text-[11px] font-mono bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">PostgreSQL</span>
+                        <span class="text-[11px] font-mono bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Python</span>
+                        <span class="text-[11px] font-mono bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Tableau</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">03 — ls ./projects</div>
+            <div class="md:col-span-2 space-y-6">
+                <div class="space-y-1">
+                    <h3 class="text-lg font-semibold text-neutral-200">Selected projects</h3>
+                    <p class="text-xs text-neutral-500 font-mono">Data pipelines and automated intelligence frameworks I've engineered.</p>
+                </div>
+                <div class="space-y-3 pt-2">
+                    <div class="font-mono text-xs text-neutral-500">2026</div>
+                    <h4 class="text-base font-semibold text-neutral-100 hover:text-emerald-400 transition-colors">E-Commerce Churn Prediction Pipeline</h4>
+                    <p class="text-xs text-neutral-400 leading-relaxed">
+                        An end-to-end analytical framework parsing user behavior attributes across database records to predict structural user retention drops.
+                    </p>
+                    <ul class="space-y-1.5 text-xs text-neutral-400 font-mono pl-1">
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Parsed 1.2M+ rows of activity tracking matrices through automated raw Python ingestion blocks.</li>
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Formulated a Random Forest analytical script producing clean predictive vectors at 88% precision.</li>
+                        <li class="flex items-start"><span class="text-emerald-500 mr-2">▹</span> Automated a live visual engine inside Power BI reducing manual diagnostic report compilation by 40%.</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1.5 pt-2">
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Python</span>
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">PostgreSQL</span>
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Scikit-Learn</span>
+                        <span class="text-[11px] bg-neutral-900 text-neutral-400 border border-neutral-800/60 px-2 py-0.5 rounded">Power BI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">04 — cat skills.json</div>
+            <div class="md:col-span-2 space-y-6">
+                <h3 class="text-lg font-semibold text-neutral-200">Technical skills</h3>
+                <div class="space-y-4 text-xs font-mono">
+                    <div>
+                        <div class="text-neutral-500 mb-1"><span class="text-purple-400">const</span> Languages =</div>
+                        <div class="text-neutral-300 font-medium">Python · SQL (Postgres, BigQuery, T-SQL) · R · SAS</div>
+                    </div>
+                    <div>
+                        <div class="text-neutral-500 mb-1"><span class="text-purple-400">const</span> DataInfrastructure =</div>
+                        <div class="text-neutral-300 font-medium">Snowflake · Google BigQuery · AWS S3 · Databricks · dbt</div>
+                    </div>
+                    <div>
+                        <div class="text-neutral-500 mb-1"><span class="text-purple-400">const</span> BiPlatforms =</div>
+                        <div class="text-neutral-300 font-medium">Tableau Desktop · Power BI Engine · Looker Studio</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
+            <div class="font-mono text-sm font-semibold text-emerald-500 tracking-wider">05 — ./contact.sh</div>
+            <div class="md:col-span-2 space-y-4">
+                <h3 class="text-lg font-semibold text-neutral-200">Get in touch</h3>
+                <p class="text-neutral-400 text-xs leading-relaxed max-w-md">
+                    For enterprise analytics architecture setups, structural database optimization strategy, or raw analytics consulting—email is monitored continuously.
+                </p>
+                <div class="text-sm font-mono pt-2">
+                    <a href="mailto:drsaddam17777@gmail.com" class="text-emerald-500 hover:underline">drsaddam17777@gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center font-mono text-[10px] text-neutral-600 border-t border-neutral-950 py-12 bg-[#050505]">
+        $ echo "Designed & built by Saddam Hussain · 2026"
+    </footer>
+
+    <script>
+      const words = ["Data Analyst", "Analytics Engineer", "Data Architect"];
+      let i = 0;
+      let timer;
+
+      function typingEffect() {
+        let word = words[i].split("");
+        var loopTyping = function() {
+          if (word.length > 0) {
+            document.getElementById('typing-text').innerHTML += word.shift();
+          } else {
+            setTimeout(deletingEffect, 2000);
+            return false;
+          }
+          timer = setTimeout(loopTyping, 100);
+        };
+        loopTyping();
+      }
+
+      function deletingEffect() {
+        let currentText = document.getElementById('typing-text').innerHTML;
+        var loopDeleting = function() {
+          if (currentText.length > 0) {
+            currentText = currentText.substring(0, currentText.length - 1);
+            document.getElementById('typing-text').innerHTML = currentText;
+          } else {
+            if (words.length > (i + 1)) {
+              i++;
+            } else {
+              i = 0;
+            }
+            setTimeout(typingEffect, 500);
+            return false;
+          }
+          timer = setTimeout(loopDeleting, 60);
+        };
+        loopDeleting();
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        if(document.getElementById('typing-text')) {
+          document.getElementById('typing-text').innerHTML = "";
+          typingEffect();
+        }
+      });
+    </script>
+
+</body>
+</html>
