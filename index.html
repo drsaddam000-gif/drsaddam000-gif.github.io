@@ -53,9 +53,24 @@
     <main class="max-w-5xl mx-auto px-6 pt-16 pb-24 space-y-28">
 
       <!-- HERO INTRO SECTION -->
-      <section id="about" class="max-w-5xl w-full pt-16 pb-24 px-6 mx-auto relative">
-        <!-- Subtle Background Grid Overlay to match Hasham's blueprint style -->
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none -z-10"></div>
+      <section id="about" class="max-w-5xl w-full pt-16 pb-24 px-6 mx-auto relative overflow-hidden">
+        <!-- Exact Matching Background Grid Pattern -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none -z-10"></div>
+
+        <!-- Custom Style Tag for Name Glitch & Glow Effects -->
+        <style>
+          @keyframes glitch {
+            0% { text-shadow: 2px -2px 0px #38bdf8, -2px 2px 0px #22c55e; }
+            25% { text-shadow: -2px 2px 0px #38bdf8, 2px -2px 0px #22c55e; }
+            50% { text-shadow: 2px 2px 0px #38bdf8, -2px -2px 0px #22c55e; }
+            75% { text-shadow: -2px -2px 0px #38bdf8, 2px 2px 0px #22c55e; }
+            100% { text-shadow: 2px -2px 0px #38bdf8, -2px 2px 0px #22c55e; }
+          }
+          .glitch-glow-name {
+            animation: glitch 3s infinite linear alternate-reverse;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+          }
+        </style>
 
         <div class="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-12 w-full relative z-10">
           
@@ -63,8 +78,17 @@
           <div class="space-y-6 max-w-xl">
             <div class="space-y-2">
               <div class="text-xs font-mono text-neutral-500 bg-neutral-900/50 border border-neutral-800 px-3 py-1 rounded-full w-fit">// Software · Data Systems · Business Intelligence · Modeling</div>
-              <h1 class="text-5xl font-bold tracking-tight text-neutral-100">Saddam Hussain</h1>
-              <h2 class="text-xl text-emerald-500 font-medium tracking-tight cursor-blink">&gt; Data Analyst & Analytics Engineer</h2>
+              
+              <!-- Glitch Glow Effect Name Wrap -->
+              <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-neutral-100 glitch-glow-name">
+                Saddam <span class="text-[#38bdf8]">Hussain</span>
+              </h1>
+              
+              <h2 class="text-xl text-[#38bdf8] font-mono tracking-tight flex items-center gap-1">
+                <span>&gt;</span>
+                <span id="typing-text">Data Analyst</span>
+                <span class="w-1.5 h-5 bg-[#38bdf8] animate-pulse"></span>
+              </h2>
             </div>
 
             <p class="text-neutral-400 text-base leading-relaxed tracking-normal">
@@ -78,7 +102,7 @@
             <!-- Styled Buttons matching Hasham's exact shape and green color tone -->
             <div class="flex flex-wrap gap-4 pt-2">
               <a href="#projects" class="inline-flex items-center justify-center bg-[#22c55e] hover:bg-[#16a34a] text-neutral-950 font-semibold px-6 py-2.5 rounded-xl transition-colors gap-2 text-sm shadow-lg shadow-green-500/10">
-                View projects <span class="text-xs">→</span>
+                View projects <span>→</span>
               </a>
               <a href="mailto:drsaddam17777@gmail.com" class="inline-flex items-center justify-center border border-neutral-800 bg-neutral-900/30 hover:bg-neutral-900/60 text-neutral-300 font-medium px-6 py-2.5 rounded-xl transition-colors gap-2 text-sm">
                 ↓ Résumé
@@ -86,39 +110,27 @@
             </div>
           </div>
 
-          <!-- Right Side: Exact Hasham Style Portrait Layout (Rectangle with Blue Border) -->
+          <!-- Right Side: Exact Hasham Style Portrait Layout with Cyber Grid Overlay -->
           <div class="flex-shrink-0 mx-auto md:mx-0">
-            <div class="relative p-1 rounded-[2rem] border-2 border-cyan-500/80 shadow-[0_0_35px_rgba(6,182,212,0.15)]">
-              <img src="portrait.jpg" alt="Saddam Hussain Portrait" class="w-64 h-80 md:w-80 md:h-[26rem] rounded-[1.8rem] object-cover">
+            <div class="relative p-1 rounded-[2rem] border-2 border-cyan-500/80 shadow-[0_0_35px_rgba(6,182,212,0.25)] overflow-hidden">
+              
+              <!-- Subtle Cyber Grid Overlay Over the Picture -->
+              <div class="absolute inset-0 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:0.5rem_0.5rem] opacity-15 pointer-events-none z-20 rounded-[1.8rem]"></div>
+              
+              <img src="portrait.jpg" alt="Saddam Hussain Portrait" class="w-64 h-80 md:w-80 md:h-[26rem] rounded-[1.8rem] object-cover relative z-10 filter brightness-95">
             </div>
           </div>
 
         </div>
       </section>
-    <!-- Right Side: Exact Portrait Layout -->
-    <div class="flex-shrink-0 mx-auto md:mx-0">
-      <img src="portrait.jpg" alt="Saddam Hussain Portrait" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-2 border-emerald-500 shadow-xl">
-    </div>
 
-  </div>
-</section>
-            <div class="text-xs text-neutral-500 flex flex-wrap gap-x-4 gap-y-2 pt-2">
-                <div>📍 Springfield, VA · U.S. Citizen</div>
-                <div class="flex gap-3 text-emerald-500 font-medium">
-                    <a href="#projects" class="hover:underline">View projects ↘</a>
-                    <span class="text-neutral-800">·</span>
-                    <a href="mailto:dami117777@gmail.com" class="hover:underline">Résumé ↗</a>
-                </div>
-            </div>
-
-            <!-- Terminal Commands Input View -->
-            <div class="pt-6 font-mono text-sm space-y-2">
-                <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">cat focus.txt</span></div>
-                <div class="text-neutral-400 pl-4 border-l border-neutral-800">cloud_warehouse · dimensional_modeling · dbt · pipeline_automation</div>
-                <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">ls ./stack</span></div>
-                <div class="text-neutral-400 pl-4 border-l border-neutral-800">sql · python · snowflake · tableau · postgresql</div>
-            </div>
-        </section>
+      <!-- Terminal Commands Input View -->
+      <div class="pt-6 font-mono text-sm space-y-2">
+          <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">cat focus.txt</span></div>
+          <div class="text-neutral-400 pl-4 border-l border-neutral-800">cloud_warehouse · dimensional_modeling · dbt · pipeline_automation</div>
+          <div class="text-neutral-600">saddam@portfolio: ~ $ <span class="text-neutral-300">ls ./stack</span></div>
+          <div class="text-neutral-400 pl-4 border-l border-neutral-800">sql · python · snowflake · tableau · postgresql</div>
+      </div>
 
         <!-- 01 — WHOAMI (Two-column layout like Hashaam's) -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-neutral-900 pt-12">
@@ -233,7 +245,7 @@
                     For enterprise analytics architecture setups, structural database optimization strategy, or raw analytics consulting—email is monitored continuously.
                 </p>
                 <div class="text-sm font-mono pt-2">
-                    <a href="mailto:dami117777@gmail.com" class="text-emerald-500 hover:underline">dami117777@gmail.com</a>
+                    <a href="mailto:drsaddam17777@gmail.com" class="text-emerald-500 hover:underline">drsaddam17777@gmail.com</a>
                 </div>
             </div>
         </section>
@@ -244,6 +256,54 @@
     <footer class="text-center font-mono text-[10px] text-neutral-600 border-t border-neutral-950 py-12 bg-[#050505]">
         $ echo "Designed & built by Saddam Hussain · 2026"
     </footer>
+
+    <!-- Dynamic Title Changing Script -->
+    <script>
+      const words = ["Data Analyst", "Analytics Engineer", "Data Architect"];
+      let i = 0;
+      let timer;
+
+      function typingEffect() {
+        let word = words[i].split("");
+        var loopTyping = function() {
+          if (word.length > 0) {
+            document.getElementById('typing-text').innerHTML += word.shift();
+          } else {
+            setTimeout(deletingEffect, 2000);
+            return false;
+          }
+          timer = setTimeout(loopTyping, 100);
+        };
+        loopTyping();
+      }
+
+      function deletingEffect() {
+        let word = words[i].split("");
+        var loopDeleting = function() {
+          if (word.length > 0) {
+            word.pop();
+            document.getElementById('typing-text').innerHTML = word.join("");
+          } else {
+            if (words.length > (i + 1)) {
+              i++;
+            } else {
+              i = 0;
+            }
+            setTimeout(typingEffect, 500);
+            return false;
+          }
+          timer = setTimeout(loopDeleting, 60);
+        };
+        loopDeleting();
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        if(document.getElementById('typing-text')) {
+          document.getElementById('typing-text').innerHTML = "";
+          typingEffect();
+        }
+      });
+    </script>
 
 </body>
 </html>
